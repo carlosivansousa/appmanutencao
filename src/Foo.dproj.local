@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/03/18 13:32:17.000.872,=C:\appmanutencao\appmanutencao\src\Unit1.pas</Transaction>
+    <Transaction>2022/03/18 13:38:09.000.135,C:\appmanutencao\appmanutencao\src\Unit1.dfm=C:\appmanutencao\appmanutencao\src\U_exceca.dfm</Transaction>
+    <Transaction>2022/03/18 13:38:09.000.135,C:\appmanutencao\appmanutencao\src\Unit1.pas=C:\appmanutencao\appmanutencao\src\U_exceca.pas</Transaction>
+    <Transaction>2022/03/18 16:04:20.000.011,=C:\appmanutencao\appmanutencao\src\Unit1.pas</Transaction>
+    <Transaction>2022/03/18 16:04:48.000.176,C:\appmanutencao\appmanutencao\src\Unit1.dfm=C:\appmanutencao\appmanutencao\src\Threads.dfm</Transaction>
+    <Transaction>2022/03/18 16:04:48.000.176,C:\appmanutencao\appmanutencao\src\Unit1.pas=C:\appmanutencao\appmanutencao\src\Threads.pas</Transaction>
+    <Transaction>2022/03/18 16:05:46.000.320,C:\appmanutencao\appmanutencao\src\U_exceca.pas=C:\appmanutencao\appmanutencao\src\Excecao.pas</Transaction>
+    <Transaction>2022/03/18 16:05:46.000.320,C:\appmanutencao\appmanutencao\src\U_exceca.dfm=C:\appmanutencao\appmanutencao\src\Excecao.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

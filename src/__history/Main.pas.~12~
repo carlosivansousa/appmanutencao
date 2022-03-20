@@ -1,0 +1,59 @@
+unit Main;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls,Datasnap.DBClient;
+
+type
+  TfMain = class(TForm)
+    btDatasetLoop: TButton;
+    btThreads: TButton;
+    btStreams: TButton;
+    btExcecao: TButton;
+    procedure btDatasetLoopClick(Sender: TObject);
+    procedure btStreamsClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure btExcecaoClick(Sender: TObject);
+  private
+  public
+  end;
+
+var
+  fMain: TfMain;
+
+
+implementation
+
+uses
+  DatasetLoop, ClienteServidor, U_exceca;
+
+{$R *.dfm}
+
+procedure TfMain.btDatasetLoopClick(Sender: TObject);
+begin
+  fDatasetLoop.Show;
+end;
+
+
+Procedure TfMain.btStreamsClick(Sender: TObject);
+begin
+  fClienteServidor.Show;
+end;
+
+Procedure TfMain.FormCreate(Sender: TObject);
+begin
+    frmexcecao.CriaTempLog('0');
+end;
+
+Procedure TfMain.btExcecaoClick(Sender: TObject);
+begin
+   frmexcecao.Show;
+end;
+
+
+End.
+
+
+//Tfrmexcecao

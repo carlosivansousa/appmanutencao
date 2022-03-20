@@ -1,0 +1,61 @@
+unit U_exceca;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls,Datasnap.DBClient,Db;
+
+type
+  Tfrmexcecao = class(TForm)
+    MemoExcecao: TMemo;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+        function SalvarLog(ADado: String): Boolean;
+        function CriaTempLog(Tipo: string): Boolean;
+  end;
+
+var
+  frmexcecao: Tfrmexcecao;
+  cdsExcecao: TClientDataset;
+
+implementation
+
+{$R *.dfm}
+
+uses Main;
+
+
+
+function Tfrmexcecao.SalvarLog(ADado: String): Boolean;
+begin
+  //  cdsExcecao := TClientDataset.Create(nil);
+  //  cdsExcecao.Data := AData;
+    cdsExcecao.Append;
+    cdsExcecao.FieldByName('LogExcecao').AsString := Adado;
+    cdsExcecao.Post;
+    Result := True;
+end;
+
+
+function Tfrmexcecao.CriaTempLog(Tipo: String): Boolean;
+var cdsExcecao : TClientDataSet;
+      dsExcecao: TDataSource;
+begin
+  cdsExcecao := TClientDataSet.Create(nil);
+  cdsExcecao.Close;
+  cdsExcecao.FieldDefs.Clear;
+  cdsExcecao.FieldDefs.add('LogExcecao',ftString,150);
+  cdsExcecao.CreateDataSet;
+
+  dsExcecao := TDataSource.Create(nil);
+  dsExcecao.DataSet := cdsExcecao;
+  Result := True;
+
+end;
+
+
+
+end.
